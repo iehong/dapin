@@ -1,0 +1,24 @@
+.App {
+  background-image: url(./assets/bg.jpg);
+  width: calc(100vh / 9 * 16);
+  .c {
+    background-image: url(./assets/c.png);
+    width: calc(100vh / 9 * 16);
+    animation: spin 100s linear infinite;
+  }
+  .custom {
+    .nut-countup__number,
+    .nut-countup__separator {
+      color: #fff;
+      font-size: 4rem;
+    }
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

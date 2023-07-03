@@ -1,0 +1,27 @@
+server:
+  port: 8089
+sa-token:
+  is-log: false
+  is-print: false
+spring:
+  datasource:
+    driver-class-name: com.ibm.db2.jcc.DB2Driver
+    url: jdbc:db2://127.0.0.1:50000/bldk
+    username: db2inst1
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+  main:
+    banner-mode: off
+
+logging:
+  pattern:
+    file: "%d{${LOG_DATEFORMAT_PATTERN:MM-dd HH:mm}} ${LOG_LEVEL_PATTERN:-%5p} -- %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+  file:
+    path: ./logs/
+  logback:
+    rollingpolicy:
+      max-history: 10
